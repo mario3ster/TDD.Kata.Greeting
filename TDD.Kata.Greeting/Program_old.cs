@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace TDD.Kata.Greeting
 {
-    public class Program
+    public class GreetingManager
     {
         // static void Main(string[] args)
         // {

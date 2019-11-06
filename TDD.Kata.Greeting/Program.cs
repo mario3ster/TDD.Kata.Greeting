@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Core
+namespace TDD.Kata.Greeting
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
