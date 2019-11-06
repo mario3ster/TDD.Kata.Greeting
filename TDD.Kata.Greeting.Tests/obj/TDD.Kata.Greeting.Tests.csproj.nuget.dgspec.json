@@ -1,0 +1,126 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\TDD.Kata.Greeting.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\TDD.Kata.Greeting.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\TDD.Kata.Greeting.Tests.csproj",
+        "projectName": "TDD.Kata.Greeting.Tests",
+        "projectPath": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\TDD.Kata.Greeting.Tests.csproj",
+        "packagesPath": "C:\\Users\\mangelov3\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mangelov3\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj": {
+                "projectPath": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.2.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.13.0, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj",
+        "projectName": "TDD.Kata.Greeting",
+        "projectPath": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj",
+        "packagesPath": "C:\\Users\\mangelov3\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mangelov3\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
