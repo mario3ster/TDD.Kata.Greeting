@@ -53,10 +53,20 @@ namespace TDD.Kata.Greeting.Tests
 
         [Test]
         public void When_ArbitraryNumberOfNamesMixedWithShouting_Expect_GreetingAndShouting()
-        {            
+        {       
             var message = Program.Greet(new string[] { "Amy", "BRIAN", "Charlotte" });
+            var moreComplexMessage = Program.Greet(new string[] { "MARIO", "Bob", "Mary", "Amy", "BRIAN", "Charlotte" });
 
             Assert.AreEqual("Hello, Amy and Charlotte. AND HELLO BRIAN!", message);
+            Assert.AreEqual("Hello, Bob, Mary, Amy, and Charlotte. AND HELLO MARIO! AND HELLO BRIAN!", moreComplexMessage);
+        }
+
+         [Test]
+        public void When_MultipleNamesMixedWithCommaSeparated_Expect_GreetEverybody()
+        {       
+            var message = Program.Greet(new string[] { "Bob", "Charlie, Dianne", "Mario, Maya", "Bar, Foo, Foolish" });
+
+            Assert.AreEqual("Hello, Bob, Charlie, Dianne, Mario, Maya, Bar, Foo, and Foolish.", message);
         }
     }
 }

@@ -1898,7 +1898,7 @@
       ]
     },
     "NETStandard.Library/2.0.0": {
-      "sha512": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
+      "sha512": "49ZAcrnNn56GIJwGoiaI7NpwcEJ8mjUyfSqVYIJMDhOBzPe8HSHS74swF2H0v8fzj7pxLfcYjS9P5PdIqsTQxw==",
       "type": "package",
       "path": "netstandard.library/2.0.0",
       "files": [
@@ -2752,7 +2752,7 @@
       ]
     },
     "System.Diagnostics.TextWriterTraceListener/4.0.0": {
-      "sha512": "w36Dr8yKy8xP150qPANe7Td+/zOI3G62ImRcHDIEW+oUXUuTKZHd4DHmqRx5+x8RXd85v3tXd1uhNTfsr+yxjA==",
+      "sha512": "oRsXCz76GDDMrwjMjH6keR9erFIofhGaIMc2d4NykI4rdBEuUP5ZswYA30LGPdyCK7DV4bMBEJL3nJFyAJoS/g==",
       "type": "package",
       "path": "system.diagnostics.textwritertracelistener/4.0.0",
       "files": [
@@ -5276,31 +5276,37 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mangelov3\\.nuget\\packages\\": {}
+    "C:\\Users\\Galaxy\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\TDD.Kata.Greeting.Tests.csproj",
+      "projectUniqueName": "C:\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\TDD.Kata.Greeting.Tests.csproj",
       "projectName": "TDD.Kata.Greeting.Tests",
-      "projectPath": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\TDD.Kata.Greeting.Tests.csproj",
-      "packagesPath": "C:\\Users\\mangelov3\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\obj\\",
+      "projectPath": "C:\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\TDD.Kata.Greeting.Tests.csproj",
+      "packagesPath": "C:\\Users\\Galaxy\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\mangelov3\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Galaxy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj": {
-              "projectPath": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj"
+            "C:\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj": {
+              "projectPath": "C:\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj"
             }
           }
         }

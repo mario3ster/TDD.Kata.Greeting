@@ -1,32 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\TDD.Kata.Greeting.Tests.csproj": {}
+    "C:\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\TDD.Kata.Greeting.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\TDD.Kata.Greeting.Tests.csproj": {
+    "C:\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\TDD.Kata.Greeting.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\TDD.Kata.Greeting.Tests.csproj",
+        "projectUniqueName": "C:\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\TDD.Kata.Greeting.Tests.csproj",
         "projectName": "TDD.Kata.Greeting.Tests",
-        "projectPath": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\TDD.Kata.Greeting.Tests.csproj",
-        "packagesPath": "C:\\Users\\mangelov3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\obj\\",
+        "projectPath": "C:\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\TDD.Kata.Greeting.Tests.csproj",
+        "packagesPath": "C:\\Users\\Galaxy\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting.Tests\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mangelov3\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Galaxy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj": {
-                "projectPath": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj"
+              "C:\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj": {
+                "projectPath": "C:\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj"
               }
             }
           }
@@ -72,22 +77,27 @@
         }
       }
     },
-    "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj": {
+    "C:\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj",
+        "projectUniqueName": "C:\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj",
         "projectName": "TDD.Kata.Greeting",
-        "projectPath": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj",
-        "packagesPath": "C:\\Users\\mangelov3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mangelov3\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\obj\\",
+        "projectPath": "C:\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\TDD.Kata.Greeting.csproj",
+        "packagesPath": "C:\\Users\\Galaxy\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\TDD.Kata.Greeting\\TDD.Kata.Greeting\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mangelov3\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Galaxy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
