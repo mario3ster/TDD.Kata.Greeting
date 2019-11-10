@@ -1,110 +1,134 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace TDD.Kata.Greeting
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+
     public class Program
     {
-        static void Main(string[] args)
+        internal interface IGreetable
         {
-            System.Console.WriteLine(Greet(null));
-            System.Console.WriteLine(Greet("Bob"));
-            System.Console.WriteLine(Greet("MAYA"));
-            System.Console.WriteLine(Greet("Bob", "Mary"));
-            System.Console.WriteLine(Greet("Joe", "Bar", "Foo"));
-            System.Console.WriteLine(Greet("Joe", "BAR", "Foo"));            
+            string Greet();
         }
 
-        public static string Greet (params string[] names)
+        internal class NullNameGreeting : IGreetable
         {
-            var greetingEngine = new List<Greeting>() 
-            { 
-                new Greeting() 
-                {
-                    Predicate = () => names is null, 
-                    Template = "Hello, my friend.",
-                    GetTemplateParams = () => new string [] { "" }
-                },
-
-                new Greeting() 
-                {
-                    Predicate = () => names.Length == 1 && names[0].All(c => char.IsUpper(c)), 
-                    Template = "HELLO {0}!",
-                    GetTemplateParams = () => new string[] { names[0] }
-                },
-
-                new Greeting() 
-                {
-                    Predicate = () => names.Length == 1, 
-                    Template = "Hello, {0}.",
-                    GetTemplateParams = () => new string[] { names[0] }
-                },
-                
-                new Greeting() 
-                {
-                    Predicate = () => names.Length == 2, 
-                    Template = "Hello, {0} and {1}.",
-                    GetTemplateParams = () => new string[] { names[0], names[1] }
-                },
-
-                new Greeting() 
-                {
-                    Predicate = () => 
-                        names.Length > 2 && 
-                        names.Any(name => 
-                                        name.All(symbol => char.IsUpper(symbol))), 
-                    Template = "Hello, {0} and {1}. HELLO {2}!",                    
-                    GetTemplateParams = () => GetParamsForMultiplePersonsGreetingWithShouting(names)
-                },
-
-                new Greeting() 
-                {
-                    Predicate = () => names.Length > 2, 
-                    Template = "Hello, {0}, and {1}.",                    
-                    GetTemplateParams = () => new string[] 
-                    { 
-                        string.Join(", ", names.Take(names.Length - 1)), 
-                        names.Last()
-                    }
-                },
-
-               
-            };
-
-            foreach (var item in greetingEngine)
+            public string Greet()
             {
-                if(item.Predicate())
-                {
-                    var greetingMessage = string.Format(item.Template, item.GetTemplateParams());
+                return "Hello, my friend.";
+            }
+        }
 
-                    return greetingMessage;
-                }
+        internal class SingleNameGreeting : IGreetable
+        {
+            string name;
+
+            public SingleNameGreeting(string _name)
+            {
+                name = _name;
             }
 
-            throw new ArgumentException("Not implemented greeting for that input");
+            public virtual string Greet()
+            {
+                if (name.All(c => char.IsUpper(c)))
+                {
+                    return string.Format("HELLO {0}!", name);
+                }
+
+                return string.Format("Hello, {0}.", name);
+            }
         }
 
-        private static string[] GetParamsForMultiplePersonsGreetingWithShouting (string[] names)
-        {            
-            string[] uppercaseNames = names.Where(name => name.All(symbol => char.IsUpper(symbol))).ToArray();
-            var regularNames = names.Except(uppercaseNames);
+        internal class MultipleNamesGreeting : IGreetable
+        {
+            protected string[] names;
 
-            return new string[] 
-                    { 
-                        string.Join(", ", regularNames.Take(names.Length - 1)), 
-                        regularNames.Last(),                        
-                        uppercaseNames.Last(),                        
-                    };
+            public MultipleNamesGreeting(string[] _names)
+            {
+                names = _names;
+            }
+
+            protected MultipleNamesGreeting() {}
+
+            public virtual string Greet()
+            {
+                string greeting = String.Empty;
+                string[] upperCaseNames = names.Where(name => name.All(c => Char.IsUpper(c))).ToArray();
+                string[] regularNames = names.Except(upperCaseNames).ToArray();
+
+                if (regularNames.Length == 2)
+                {
+                    greeting = string.Format("Hello, {0} and {1}.", regularNames[0], regularNames[1]);
+                }
+                else if (regularNames.Length > 2)
+                {
+                    string lastOne = regularNames.Last();
+                    string[] allWithoutLastOne = regularNames.Take(regularNames.Length - 1).ToArray();
+                    string allWithoutLastOneAsString = String.Join(", ", allWithoutLastOne);
+
+                    greeting = String.Format("Hello, {0}, and {1}.", allWithoutLastOneAsString, lastOne);
+                }
+
+                var greetingBuilder = new StringBuilder(greeting);
+
+                foreach (var uCaseName in upperCaseNames)
+                {
+                    greetingBuilder.Append(string.Format(" AND HELLO {0}!", uCaseName));
+                }
+
+                return greetingBuilder.ToString();
+            }
         }
-    }
 
-    
-    internal class Greeting
-    {
-        internal Func<bool> Predicate { get; set; }
-        internal string Template { get; set; }
+        internal class MultipleCommaSeparatedNames : MultipleNamesGreeting, IGreetable
+        {
+            public MultipleCommaSeparatedNames(string[] _names)
+            {
+                var parsedNames = new List<string>();
 
-        internal Func<string[]> GetTemplateParams { get; set; }
+                foreach(var name in _names)
+                {
+                    if(name.Contains(","))
+                    {
+                        string[] subnames = name.Split(",");
+
+                        foreach (var subname in subnames)
+                        {
+                            parsedNames.Add(subname.Trim());
+                        }
+
+                        continue;
+                    }   
+
+                    parsedNames.Add(name);
+                }
+
+                base.names = parsedNames.ToArray();
+            }
+
+            public override string Greet()
+            {
+                return base.Greet();
+            }
+        }
+        public static string Greet(params string[] names)
+        {
+            if (names is null)
+            {
+                return (new NullNameGreeting()).Greet();
+            }
+
+            if (names.Length == 1)
+            {
+                return (new SingleNameGreeting(names[0])).Greet();
+            }
+
+            return (new MultipleCommaSeparatedNames(names)).Greet();
+        }
+
+        static void Main(string[] args)
+        {
+        }
     }
 }
